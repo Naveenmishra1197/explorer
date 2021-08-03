@@ -1,0 +1,27 @@
+name: node_js
+
+on:
+  push:
+    branches:  [master]
+  pull_request:
+    branches:  [master]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os : [ ubuntu-latest, macos-latest, windows-latest] 
+        node-version: [lts/*]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run : |
+             - npm Install
+             - npm run build
+             - npm run test
+             - npm run format
