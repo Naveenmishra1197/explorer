@@ -1,15 +1,15 @@
-language: node_js
+# language: node_js
 
-# "node" (v16) is not supported by node-sass yet
-# https://github.com/sass/node-sass/pull/3090
-node_js:
-  - "lts/*"
+# # "node" (v16) is not supported by node-sass yet
+# # https://github.com/sass/node-sass/pull/3090
+# node_js:
+#   - "lts/*"
 
-branches:
-  only:
-    - master
+# branches:
+#   only:
+#     - master
 
-script:
-  - npm run build
-  - npm run test
-  - npm run format
+# script:
+#   - npm run build
+#   - npm run test
+#   - npm run format
