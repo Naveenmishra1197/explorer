@@ -1,7 +1,7 @@
 <p align="center">
     <img alt="Solana" src="https://i.imgur.com/uBVzyX3.png" width="250" />
 </p>
-minor version test
+major version test
 # Solana Explorer
 
 ## Development
