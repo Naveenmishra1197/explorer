@@ -10,16 +10,13 @@ jobs:
   build:
     name : test & build
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [lts/*]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js lts/*
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+            node-version: 'lts/*'
       - run : |          
             npm ci
             npm run build
