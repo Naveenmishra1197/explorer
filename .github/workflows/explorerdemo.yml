@@ -13,7 +13,6 @@ jobs:
     strategy:
       matrix:
         node-version: [lts/*]
-#     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
